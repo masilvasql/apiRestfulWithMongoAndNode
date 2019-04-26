@@ -8,6 +8,7 @@ app.use(bodyParser.json({limit:'50mb'}))
 const port = process.env.PORT || 9000;
 
 require('./app/routes/crud')(app)
+require('./app/config/database')
 
 app.listen(port, ()=>{
     console.log(`RODANDO NA PORTE ${port}`)
